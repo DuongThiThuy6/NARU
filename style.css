@@ -4,6 +4,10 @@
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:"Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
   background:#ffffff;
@@ -14,6 +18,141 @@ section{
   max-width:900px;
   margin:50px auto;
   padding:35px 30px;
+}
+
+/* Hero */
+.hero{
+  max-width:none;
+  width:100%;
+  min-height:100vh;
+  margin:0;
+  padding:0;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
+    url("ChatGPT Image 17_47_17 9 thg 6....png");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo img{
+  width:50px;
+  height:50px;
+  border-radius:6px;
+  object-fit:cover;
+}
+
+.logo span{
+  font-size:22px;
+  color:#222;
+}
+
+.navbar ul{
+  display:flex;
+  list-style:none;
+  gap:35px;
+}
+
+.navbar a{
+  text-decoration:none;
+  color:#222;
+  font-size:18px;
+}
+
+.hero-content{
+  max-width:900px;
+  margin-left:90px;
+  margin-top:70px;
+}
+
+.blue{
+  color:#003cff;
+  font-size:42px;
+  line-height:1.55;
+  font-weight:normal;
+}
+
+.red{
+  color:red;
+  font-size:48px;
+  line-height:1.45;
+  margin-top:25px;
+  font-weight:normal;
+}
+
+.sub1{
+  margin-top:35px;
+  font-size:30px;
+  color:#111;
+}
+
+.sub2{
+  margin-top:20px;
+  font-size:30px;
+  color:#111;
+}
+
+.sub2 span{
+  color:red;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:35px;
+  padding:16px 90px;
+  background:white;
+  color:#00796B;
+  border:2px solid #00796B;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:20px;
+}
+
+/* Coach */
+.coach-section{
+  max-width:1200px;
+  display:flex;
+  gap:45px;
+  align-items:flex-start;
+}
+
+.coach-image img{
+  width:380px;
+  max-width:100%;
+}
+
+.coach-text{
+  flex:1;
+}
+
+.coach-text h2{
+  color:#1557c8;
+  font-size:40px;
+  margin-bottom:30px;
+}
+
+.coach-text h2 span{
+  font-weight:bold;
+}
+
+.coach-text p{
+  font-size:24px;
+  line-height:1.8;
+  margin-bottom:25px;
 }
 
 /* Webinar */
@@ -300,12 +439,93 @@ section{
   color:#D32F2F;
 }
 
+/* Footer */
+.footer{
+  text-align:center;
+  padding:30px;
+  background:#1F2A44;
+  color:white;
+}
+
 /* Smartphone */
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
   section{
     width:94%;
     margin:35px auto;
     padding:22px 14px;
+  }
+
+  .hero{
+    width:100%;
+    min-height:auto;
+    padding-bottom:40px;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+    padding:18px;
+  }
+
+  .logo span{
+    font-size:17px;
+  }
+
+  .navbar ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .navbar a{
+    font-size:15px;
+  }
+
+  .hero-content{
+    margin:35px 20px;
+  }
+
+  .blue{
+    font-size:30px;
+  }
+
+  .red{
+    font-size:36px;
+  }
+
+  .sub1,
+  .sub2{
+    font-size:22px;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+    padding:14px;
+    font-size:16px;
+  }
+
+  .coach-section{
+    flex-direction:column;
+  }
+
+  .coach-image{
+    text-align:center;
+    width:100%;
+  }
+
+  .coach-image img{
+    width:85%;
+  }
+
+  .coach-text h2{
+    font-size:28px;
+    line-height:1.4;
+  }
+
+  .coach-text p{
+    font-size:17px;
+    line-height:1.8;
   }
 
   .webinar-title,
